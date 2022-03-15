@@ -4,7 +4,7 @@ import { fonts, colors, screenHeight } from '../../Constants/constants';
 export const Container = styled.View`
   background-color: ${colors.background};
   flex: 1;
-  height: 100%;
+  
 `;
 
 export const Image = styled.ImageBackground`
