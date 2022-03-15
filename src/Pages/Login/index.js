@@ -15,7 +15,6 @@ export default function Login({navigation}) {
 
   return (
     <SafeArea>
-      
       <Container>
           <TitleContainer>
             <Text>Login</Text>
@@ -49,10 +48,8 @@ export default function Login({navigation}) {
               size={18}
               onPress={() => navigation.navigate('First')}
             />
-            
           </ButtonContainer>
-      </Container>
-          
+      </Container>         
     </SafeArea>
   );
 }

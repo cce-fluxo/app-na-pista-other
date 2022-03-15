@@ -16,10 +16,8 @@ export default function CreateAccount({navigation}) {
   const [password,onChangePassword]=useState('')
   const [confirmPassword,onChangeConfirmPassword]=useState('')
   
-
   return (
     <SafeArea>
-      
       <Container>
           <TitleContainer>
             <Text>Criar conta</Text>
@@ -67,10 +65,7 @@ export default function CreateAccount({navigation}) {
                 <UnderlineText>Termos de Privacidade.</UnderlineText>
             </BottomText>
           </ButtonContainer>
-          
-      </Container>
-      
-          
+      </Container>   
     </SafeArea>
   );
 }
