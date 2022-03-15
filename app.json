@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "na-pista",
-    "slug": "na-pista",
+    "name": "app-na-pista",
+    "slug": "app-na-pista",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
