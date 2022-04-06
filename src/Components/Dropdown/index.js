@@ -1,50 +1,66 @@
+import { useState} from 'react';
+import Icon from 'react-native-vector-icons/Entypo';
 
-import ModalSelector from 'react-native-modal-selector'
-import { useState } from 'react';
-import { Icon } from 'react-native-elements';
+import {
+  FlatList
+} from "react-native";
+import Modal from "react-native-modal";
+import { Container, ItemContainer, ModalContainer, SelectContainer, SelectText, Title } from './styles';
+import { colors,screenHeight } from '../../Constants/constants';
 
 
 
-import { Container, Title, SelectContainer, SelectText, Drop } from './styles';
-const countries = [{ key: 5, label: 'Red Apples' },{ key: 4, label: 'rr Apples' }]
+const Dropdown= ({label, data, marginTop, marginLeft,
+  } ) => {
+ 
+    const [isModalVisible, setModalVisible] = useState(false);
+    const [selectedValue, setSelectedValue] = useState({label: 'Selecione...', value: ''});
 
+    const toggleModal = () => {
+      setModalVisible(!isModalVisible);
+    };
 
-const Dropdown = ({
-  title,
-  marginTop,
-  marginLeft,
-  placeholder,
-  secureTextEntry,
-  keyboardType,
-  error,
-  touched,
-  onChangeText,
-  value,
-  onSubmitEditing,
-  onBlur,
-  autoCapitalize,
-  autoComplete,
-}
-) => {
-  const [selectedOption,setSelectedOption]=useState('')
-  const Custom=()=>{
-    return(
-      <SelectContainer>
-          <SelectText
-          >Selecione um</SelectText>
+  
+  
+  
+  const Item = ({ item }) => (
+    <ItemContainer
+      marginTop={20}
+      onPress={() => {
+        setSelectedValue(item);
+        setModalVisible(false);
+      }}>
+      <SelectText >{item.label}</SelectText>
+    </ItemContainer>
+  );
+
+  const renderItem = ({ item }) => (
+    <Item item={item} />
+  );
+
+  return (
+    <Container marginTop={marginTop} marginLeft={marginLeft}>
+      <Title>{label}</Title>
+      <SelectContainer onPress={toggleModal}>
+        <SelectText>{selectedValue.label}</SelectText>
+        <Icon name="chevron-down" size={30} color={colors.background} />
+      </SelectContainer>  
+
+      
+
+      <Modal isVisible={isModalVisible}
+      onBackdropPress={() => setModalVisible(false)}>
+        <ModalContainer>
+        <FlatList
+        data={data}
+        renderItem={renderItem}
+        keyExtractor={item => item.id}
         
-      </SelectContainer>
-    )
-  }
-  return(
-  <Container marginTop={marginTop} marginLeft={marginLeft}>
-    <Title>{title}</Title>
-    
-    
-    
-
-  </Container>
-  )
+        />
+        </ModalContainer>
+      </Modal>
+    </Container>
+  );
 }
 
 export default Dropdown;

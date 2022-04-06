@@ -6,6 +6,8 @@ import FirstScreen from '../Pages/FirstScreen';
 import Login from '../Pages/Login';
 import CreateAccount from '../Pages/CreateAccount';
 import BasicInfo from '../Pages/BasicInfo';
+import WhereYouLive from '../Pages/WhereYouLive';
+import Vehicles from '../Pages/Vehicles';
 
   const Stack = createStackNavigator();
   
@@ -19,6 +21,8 @@ import BasicInfo from '../Pages/BasicInfo';
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="Criar conta" component={CreateAccount} />
           <Stack.Screen name="Informacoes basicas" component={BasicInfo} />
+          <Stack.Screen name="Onde voce mora" component={WhereYouLive} />
+          <Stack.Screen name="Veiculos" component={Vehicles} />
         </Stack.Navigator>
       </NavigationContainer>
     );

@@ -1,6 +1,5 @@
 
 import styled from 'styled-components/native';
-
 import {colors,screenHeight, screenWidth,fonts} from '../../Constants/constants';
 
 export const Container = styled.View`
@@ -22,18 +21,13 @@ export const Title = styled.Text`
   margin-bottom: 5px;
 `;
 
+export const ModalContainer=styled.View`
+  padding-bottom: 20px;
+  background-color: white;
+`
 
 
-
-export const SelectText = styled.Text`
-    
-    
-    align-self: center;
-    color: black;
-    
-`;
-
-export const SelectContainer = styled.TouchableOpacity`
+export const InputContainer = styled.TouchableOpacity`
   flex: 1;
   align-self: center;
   align-items: center;
@@ -43,29 +37,14 @@ export const SelectContainer = styled.TouchableOpacity`
   width: 100%;
   flex-direction: row;
   padding: 20px;
-  height: 54px;  
+    
 `
 
-export const ModalContainer=styled.View`
-  padding-bottom: 20px;
-  background-color: white;
-  max-height:${screenHeight * 0.5}px;
-  border-radius: 5px;
-`
-export const ItemContainer = styled.TouchableOpacity`
-  width: 90%;
-  height: 36px;
-  margin-top: ${props => props.marginTop}px;
-  
-  border-radius: 5px;
-  background-color: ${colors.background};
-  color: ${props => {
-    return props.color ? props.color : 'black';
-  }};
-  
-  align-self: center;
-  align-items: center;
-  justify-content: center;
-  
-  
+export const InputText = styled.Text`
+    
+    
+    align-self: center;
+    color: black;
+    
 `;
+

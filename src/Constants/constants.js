@@ -4,8 +4,8 @@ export const screenWidth = Dimensions.get('screen').width;
 export const screenHeight = Dimensions.get('screen').height;
 
 export const colors= {
-    background: '#FFBF00 ',
-    inputTitle: 'rgba(0, 0, 0, 0.6);',
+    background: '#FFBF00',
+    inputTitle: 'rgba(0, 0, 0, 0.6)',
     
   };
 
