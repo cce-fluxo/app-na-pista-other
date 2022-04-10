@@ -5,8 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import FirstScreen from '../Pages/FirstScreen';
 import Login from '../Pages/Login';
 import CreateAccount from '../Pages/CreateAccount';
-// import BasicInfo from '../Pages/BasicInfo';
-import InfoBasic from '../Pages/InfoBasic';
+import BasicInfo from '../Pages/BasicInfo';
 import WhereYouLive from '../Pages/WhereYouLive';
 import Vehicles from '../Pages/Vehicles';
 import EarningGoals from '../Pages/EarningGoals';
@@ -19,13 +18,13 @@ import Success from '../Pages/Success';
       <NavigationContainer>
         <Stack.Navigator screenOptions={{
     headerShown: false
-  }}>
+  }}>     
+  
           <Stack.Screen name="First" component={FirstScreen} />
+          <Stack.Screen name="Informacoes basicas" component={BasicInfo} />
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="Criar conta" component={CreateAccount} />
-          {/* <Stack.Screen name="Informacoes basicas" component={BasicInfo} /> */}
-          <Stack.Screen name="Informacoes Basicas" component={InfoBasic}/>
-          <Stack.Screen name="Onde voce mora" component={WhereYouLive} />
+          <Stack.Screen name="Onde voce mora" component={WhereYouLive} /> 
           <Stack.Screen name="Veiculos" component={Vehicles} />
           <Stack.Screen name="Metas de Ganho" component={EarningGoals} />
           <Stack.Screen name="Sucesso" component={Success} />

@@ -1,5 +1,5 @@
 import styled from 'styled-components/native';
-import { fonts, colors, screenHeight } from '../../Constants/constants';
+import { fonts, colors, screenHeight, screenWidth } from '../../Constants/constants';
 
 export const Container = styled.View`
   background-color: ${colors.background};
@@ -7,7 +7,6 @@ export const Container = styled.View`
   justify-content: space-between;
   
 `;
-
 
 export const TitleContainer = styled.View`
   flex: 1;
@@ -40,9 +39,19 @@ export const Text = styled.Text`
  
 `;
 
+export const Title = styled.Text`
+    font-family: ${  fonts.UbuntuRegular};
+    font-size:  16px;
+    color: ${colors.inputTitle};
+    line-height:   30px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+`;
+
+
 export const ButtonContainer = styled.View`
   flex: 1;
   align-items: center;
-  justify-content: flex-end;
-  margin-bottom: 36px;
+  justify-content: flex-end;  
 `;

@@ -10,7 +10,7 @@ import { colors,screenHeight } from '../../Constants/constants';
 
 
 
-const Dropdown= ({label, data, marginTop, marginLeft,
+const Dropdown= ({label, data, marginTop, marginLeft, opacity
   } ) => {
  
     const [isModalVisible, setModalVisible] = useState(false);
@@ -36,7 +36,7 @@ const Dropdown= ({label, data, marginTop, marginLeft,
   );
 
   return (
-    <Container marginTop={marginTop} marginLeft={marginLeft}>
+    <Container marginTop={marginTop}>
       <Title>{label}</Title>
       <SelectContainer onPress={toggleModal}>
         <SelectText>{selectedValue.label}</SelectText>

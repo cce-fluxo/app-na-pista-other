@@ -34,45 +34,47 @@ export default function BasicInfo({navigation}) {
   return (
     <SafeArea>
       <Container>
-          <TitleContainer>
-            <Text title={true}>Informações Básicas</Text>
-            <Text >Queremos lhe conhecer melhor, mas não se preocupe, não compartilharemos com ninguém!</Text>
-          </TitleContainer>
-          
-          <Input 
-          title={'Nome'}
-          marginLeft={0}
-          marginTop={50}
-          
-          
-          onChangeText={onChangeEmail}
-          
-          placeholder=''
+        <TitleContainer>
+          <Text title={true}>Informações Básicas</Text>
+          <Text >Queremos lhe conhecer melhor, mas não se preocupe, não compartilharemos com ninguém!</Text>
+        </TitleContainer>
+        
+        <Input 
+        title={'Nome'}
+        marginLeft={0}
+        marginTop={50}
+        
+        
+        onChangeText={onChangeEmail}
+        
+        placeholder=''
+        />
+        <Input 
+        title={'Sobrenome'}
+        marginLeft={0}
+        marginTop={30}
+        
+        onChangeText={onChangePassword}
+        placeholder=''
+        />
+        <Dropdown label="Identidade de Gênero"  data={data}  marginTop={30} />
+        {/* <Date label="Data de Nascimento"  marginTop={30}/> - resolver essa parte, calendario com datas invisíveis */}
+    
+        
+        <ButtonContainer>
+          <Button
+            width={'90%'}
+            text='Próximo'
+            marginTop={350}
+            marginLeft={0}
+            background={'white'}
+            size={18}
+            onPress={() => navigation.navigate('Onde voce mora')}
           />
-          <Input 
-          title={'Sobrenome'}
-          marginLeft={0}
-          marginTop={30}
-          
-          onChangeText={onChangePassword}
-          placeholder=''
-          />
-          <Dropdown label="Identidade de Gênero"  data={data}  marginTop={30}/>
-          {/*<Date label="Data de Nascimento"  marginTop={30}/> - resolver essa parte, calendario com datas invisíveis*/}
-      
-          
-          <ButtonContainer>
-            <Button
-              width={'90%'}
-              text='Próximo'
-              marginTop={350}
-              marginLeft={0}
-              background={'white'}
-              size={18}
-              onPress={() => navigation.navigate('Onde voce mora')}
-            />
-          </ButtonContainer>
-      </Container>         
+        </ButtonContainer>
+    </Container>
     </SafeArea>
+             
+
   );
 }

@@ -73,7 +73,7 @@ export default function Vehicles({navigation}) {
                 keyExtractor={item => item.id}
                 initialNumToRender={5}
             />
-            <AddItemModal label='Adicionar novo veículo' />
+            {/* <AddItemModal label='Adicionar novo veículo' /> */}
             <ButtonContainer>
                 <Button
                 width={'90%'}

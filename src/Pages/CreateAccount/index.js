@@ -58,7 +58,7 @@ export default function CreateAccount({navigation}) {
               marginLeft={0}
               background={'white'}
               size={18}
-              onPress={() => navigation.navigate('Informacoes Basicas')}
+              onPress={() => navigation.navigate('Informacoes basicas')}
             />
             <BottomText>Ao realizar seu cadastro você concorda com nossos {''}
                 <UnderlineText>Termos de Uso</UnderlineText> {''}e{' '}  
