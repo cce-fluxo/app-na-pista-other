@@ -7,8 +7,6 @@ import {  Container, ModalContainer, AddContainer, AddText } from './styles';
 import Button from '../Button';
 
 
-
-
 const AddItemModal= ({ marginTop, marginLeft, value, label
   } ) => {
  
@@ -20,12 +18,14 @@ const AddItemModal= ({ marginTop, marginLeft, value, label
       console.log(isModalVisible)
     };
 
-  
-  
-  
-
+    function addToList() {
+    list.push({text: {newItem}, id:'9'});
+    setList([...list]);
+    }
+    
+    
   return (
-    <Container marginTop={marginTop} marginLeft={marginLeft}>
+    <Container>
         <AddContainer onPress={toggleModal}>
             <Icon name="pluscircle" size={30} color={'black'} />
             <AddText >Adicionar outro</AddText>
@@ -44,6 +44,7 @@ const AddItemModal= ({ marginTop, marginLeft, value, label
                 onPress={() => {
                     setNewItem(value);
                     setModalVisible(false);
+                    addToList;
                 }}
                 />
             </ModalContainer>

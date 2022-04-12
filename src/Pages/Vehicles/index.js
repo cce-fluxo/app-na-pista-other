@@ -13,9 +13,6 @@ import Button from '../../Components/Button';
 import Checkbox from '../../Components/Checkbox';
 import AddItemModal from '../../Components/AddItemModal';
 
-
-
-
 export default function Vehicles({navigation}) {
     const initialList=[{
         id: 1,
@@ -54,10 +51,10 @@ export default function Vehicles({navigation}) {
         <Checkbox marginTop={30} label={item.title}/>
       );
     
-      const renderItem = ({ item }) => (
+    const renderItem = ({ item }) => (
         <Item item={item} />
-      );
-  
+    );
+      
   return (
     <SafeArea>
         
@@ -71,9 +68,9 @@ export default function Vehicles({navigation}) {
                 data={checkboxes}
                 renderItem={renderItem}
                 keyExtractor={item => item.id}
-                initialNumToRender={5}
+                // initialNumToRender={1}
             />
-            {/* <AddItemModal label='Adicionar novo veículo' /> */}
+            <AddItemModal label='Adicionar novo veículo' />
             <ButtonContainer>
                 <Button
                 width={'90%'}
@@ -82,7 +79,7 @@ export default function Vehicles({navigation}) {
                 marginLeft={0}
                 background={'white'}
                 size={18}
-                onPress={() => navigation.navigate('First')}
+                onPress={() => navigation.navigate('Plataformas')}
                 />
             </ButtonContainer>
         </Container>     

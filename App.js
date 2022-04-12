@@ -3,7 +3,8 @@ import Routes from './src/Routes/index.js';
 import AppLoading from 'expo-app-loading';
 import { useFonts, BebasNeue_400Regular } from '@expo-google-fonts/bebas-neue';
 import { Ubuntu_500Medium,Ubuntu_400Regular } from '@expo-google-fonts/ubuntu';
-
+import AddItemModal from './src/Components/AddItemModal/index.js';
+import Button from './src/Components/Button/index.js';
 
 export default function App() {
   const [fontsLoaded] = useFonts({

@@ -10,6 +10,7 @@ import WhereYouLive from '../Pages/WhereYouLive';
 import Vehicles from '../Pages/Vehicles';
 import EarningGoals from '../Pages/EarningGoals';
 import Success from '../Pages/Success';
+import Platform from '../Pages/Platform';
 
   const Stack = createStackNavigator();
   
@@ -28,6 +29,7 @@ import Success from '../Pages/Success';
           <Stack.Screen name="Veiculos" component={Vehicles} />
           <Stack.Screen name="Metas de Ganho" component={EarningGoals} />
           <Stack.Screen name="Sucesso" component={Success} />
+          <Stack.Screen name="Plataformas" component={Platform} />
         </Stack.Navigator>
       </NavigationContainer>
     );

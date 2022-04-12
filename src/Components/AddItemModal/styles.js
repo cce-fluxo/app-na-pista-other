@@ -8,9 +8,7 @@ export const Container = styled.View`
   flex:1;
   align-self: center;
   align-items: flex-start;
-  margin-top: ${props => props.marginTop}px;
-  margin-left: ${props => props.marginLeft}px;
-  
+  margin-top: 10px;
 `;
 
 
@@ -36,4 +34,5 @@ export const AddText=styled.Text`
   font-size: 14px;
   color: black;
   margin-left: 10px;
-`
+`;
+
