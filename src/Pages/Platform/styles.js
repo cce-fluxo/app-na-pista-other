@@ -5,7 +5,6 @@ export const Container = styled.View`
   background-color: ${colors.background};
   flex: 1;
   justify-content: space-between;
-  
 `;
 
 export const Image = styled.ImageBackground`
@@ -20,11 +19,9 @@ export const TitleContainer = styled.View`
   max-height: ${screenHeight*0.15}px;
   margin-left:  8px;
   margin-top: 20px;
-  margin-bottom:50px;
+  margin-bottom:45px;
   
 `;
-
-
 
 export const Text = styled.Text`
   font-family: ${props=>{ return props.title?fonts.Ubuntu:fonts.UbuntuRegular;

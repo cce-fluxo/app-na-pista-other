@@ -23,7 +23,7 @@ export default function Success({navigation}) {
               marginLeft={0}
               background={'white'}
               size={18}
-              // onPress={() => navigation.navigate('Inicio')}
+              onPress={() => navigation.navigate('First')}
           />
         </ButtonContainer>
       </Container>

@@ -7,6 +7,7 @@ import {
     Title
 } from './styles'
 
+import colors from '../../Constants/constants'
 import Button from '../../Components/Button'
 import IncrementContainer from '../../Components/IncrementContainer'
 
@@ -25,14 +26,22 @@ export default function EarningGoals({navigation}) {
               <Button 
                 width={'90%'}
                 text='Próximo'
-                marginTop={300}
+                marginTop={20}
                 marginLeft={0}
                 background={'white'}
                 size={18}
-                disabled={true}
+                disabled={false}
                 onPress={() => navigation.navigate('Sucesso')}/>
+                <Button 
+                width={'80%'}
+                text='Definir depois'
+                marginTop={10}
+                marginLeft={0}
+                background={'#FFBF00'}
+                size={16}
+                onPress={() => navigation.navigate('First')}
+                color={'rgba(0, 0, 0, 0.6)'}/>
           </ButtonContainer>
-          <Title>Definir depois</Title> 
       </Container>
     )
 }

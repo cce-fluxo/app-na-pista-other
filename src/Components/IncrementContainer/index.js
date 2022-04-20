@@ -32,7 +32,7 @@ const IncrementContainer = props => {
         <ButtonIncrementContainer onPress={()=>Increment()}>
           <Icon name='plus' size={25}/>
         </ButtonIncrementContainer>
-        <Text>{quantity}</Text>
+        <Text>R${quantity}</Text>
         <ButtonIncrementContainer onPress={()=>Decrement()}>
             <Icon name='minus' size={25}/>
         </ButtonIncrementContainer>
