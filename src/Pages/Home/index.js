@@ -12,12 +12,17 @@ import {
   MainContainer,
   ProgressBarContainer,
   ActivityButton,
-  TimeContainer
+  TimeContainer,
 } from "./styles";
 import SafeArea from "../../Utils/SafeArea";
 import Button from "../../Components/Button";
-import Input from "../../Components/Input";
-import { Ionicons, AntDesign, FontAwesome, Fontisto, Entypo  } from "react-native-vector-icons";
+import {
+  Ionicons,
+  AntDesign,
+  FontAwesome,
+  Fontisto,
+  Entypo,
+} from "react-native-vector-icons";
 import { colors, screenHeight, screenWidth } from "../../Constants/constants";
 import AddEarningModal from "../../Components/AddEarningModal";
 
@@ -27,17 +32,20 @@ export default function Home({
   marginLeft,
   marginTop,
   width,
-  screenWidth,
+  height,
+  borderRadius,
+  elevation,
   fontSize,
   lineHeight,
   color,
+  justifyContent
 }) {
   return (
     <SafeArea>
       <MainContainer showsVerticalScrollIndicator={false}>
         <Subcontainer>
-          <TextContainer>
-            <Text fontSize={20} lineHeight={30} color="black">
+          <TextContainer justifyContent={'space-between'}>
+            <Text fontSize={20} lineHeight={30} color="black" marginLeft={20}>
               Bom dia, Daniel
             </Text>
             <IconContainer
@@ -56,54 +64,85 @@ export default function Home({
         </Subcontainer>
 
         <Container>
-
-          <View marginTop={140}>
-            <Text fontSize={16} lineHeight={50} color={colors.icon}>
-              Jornada do dia
-            </Text>
-            <Text fontSize={14} lineHeight={20} color={colors.inputTitle}>
-              Clique no botão abaixo para começar e vamos {"\n"}
-              gravar automaticamente o seu tempo de {"\n"}
-              trabalho e a distância percorrida.
-            </Text>
-            <TimeContainer>
-                <ActivityButton>
-                    <FontAwesome name="play" size={24} color={colors.icon}/>
-                </ActivityButton>
-                <TextContainer>
-                    <Fontisto name="stopwatch" size={20} color={colors.inputTitle} />
-                    <Text fontSize={12} lineHeight={20} color={colors.inputTitle}>TEMPO</Text>
-                </TextContainer>
-                <TextContainer>
-                    <Entypo name="swap" size={20} color={colors.inputTitle} />
-                    <Text fontSize={12} lineHeight={20} color={colors.inputTitle}>DISTÂNCIA</Text>
-                </TextContainer>
-            </TimeContainer>
-            
-          </View>
-
-          <View marginTop={20}>
-            <TextContainer>
-                <Text fontSize={16} lineHeight={20} color={colors.icon}>
-                Metas desta semana
+            <View
+            marginTop={140}
+            width={screenWidth * 0.93}
+            height={screenHeight * 0.27}
+            elevation={4}
+            borderRadius={8}
+            marginLeft={0}>
+                <Text fontSize={16} lineHeight={50} color={colors.icon} marginLeft={20}>
+                Jornada do dia
                 </Text>
-                <IconContainer
+                <Text fontSize={14} lineHeight={20} color={colors.inputTitle} marginLeft={20}>
+                Clique no botão abaixo para começar e vamos {"\n"}
+                gravar automaticamente o seu tempo de {"\n"}
+                trabalho e a distância percorrida.
+                </Text>
+                <ActivityButton>
+                    <FontAwesome name="play" size={22} color={colors.icon} />
+                </ActivityButton>
+                <View
+                    marginTop={-screenHeight*0.1}
+                    width={screenWidth * 0.28}
+                    height={screenHeight * 0.10}
+                    elevation={0}
+                    borderRadius={8}
+                    marginLeft={-screenWidth*0.1}>
+                    <TextContainer justifyContent={'space-around'}>
+                        <Fontisto name="stopwatch" size={20} color={colors.inputTitle} />
+                        <Text fontSize={12} lineHeight={18} color={colors.inputTitle} marginLeft={-10}>
+                            TEMPO
+                        </Text>
+                    </TextContainer>
+                    <Text fontSize={34} lineHeight={31} color={colors.time} marginLeft={10}>
+                        00:00
+                    </Text>
+                </View>
+                <View
+                    marginTop={-screenHeight*0.11}
+                    width={screenWidth * 0.28}
+                    height={screenHeight * 0.10}
+                    elevation={0}
+                    borderRadius={8}
+                    marginLeft={screenWidth*0.55}>
+                        <TextContainer justifyContent={'space-around'}>
+                            <Entypo name="swap" size={20} color={colors.inputTitle} />
+                            <Text fontSize={12} lineHeight={18} color={colors.inputTitle} marginLeft={0}>
+                                DISTÂNCIA
+                            </Text>
+                        </TextContainer>
+                        <Text fontSize={34} lineHeight={31} color={colors.time} marginLeft={20}>
+                                0
+                        </Text>
+                </View>
+          </View>
+          <View
+            marginTop={20}
+            width={screenWidth * 0.93}
+            height={screenHeight * 0.2}
+            elevation={4}
+            borderRadius={8}
+            marginLeft={0}
+          >
+            <TextContainer justifyContent={'space-between'}>
+              <Text fontSize={16} lineHeight={20} color={colors.icon} marginLeft={20}>
+                Metas desta semana
+              </Text>
+              <IconContainer
                 marginRight={10}
                 onPress={() => navigation.navigate("Plataformas")}
-                >
+              >
                 <AntDesign name="right" size={18} color={colors.icon} />
-                </IconContainer>
+              </IconContainer>
             </TextContainer>
           </View>
-
-          <AddEarningModal />
-
         </Container>
 
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
           <EarningContainer marginRight={0} marginLeft={28}>
-            <TextContainer>
-              <Text fontSize={13} lineHeight={20} color={colors.inputTitle}>
+            <TextContainer justifyContent={'space-between'}>
+              <Text fontSize={13} lineHeight={20} color={colors.inputTitle} marginLeft={20}>
                 HOJE
               </Text>
               <IconContainer
@@ -117,8 +156,8 @@ export default function Home({
           </EarningContainer>
 
           <EarningContainer marginRight={0} marginLeft={20}>
-            <TextContainer>
-              <Text fontSize={13} lineHeight={20} color={colors.inputTitle}>
+            <TextContainer justifyContent={'space-between'}>
+              <Text fontSize={13} lineHeight={20} color={colors.inputTitle} marginLeft={20}>
                 ESTA SEMANA
               </Text>
               <IconContainer
@@ -131,8 +170,8 @@ export default function Home({
           </EarningContainer>
 
           <EarningContainer marginRight={20} marginLeft={20}>
-            <TextContainer>
-              <Text fontSize={13} lineHeight={20} color={colors.inputTitle}>
+            <TextContainer justifyContent={'space-between'}>
+              <Text fontSize={13} lineHeight={20} color={colors.inputTitle} marginLeft={20}>
                 ESTE MÊS
               </Text>
               <IconContainer
@@ -143,11 +182,8 @@ export default function Home({
               </IconContainer>
             </TextContainer>
           </EarningContainer>
-    
         </ScrollView>
-
       </MainContainer>
-      
     </SafeArea>
   );
 }

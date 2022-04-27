@@ -22,8 +22,8 @@ export default function App() {
   }
   return (
     <>
-      <StatusBar translucent backgroundColor={colors.background}/>
-      <SignedInRoutes/>
+      <StatusBar translucent backgroundColor={colors.background} />
+      <SignedOutRoutes/>
     </>
   );
 }

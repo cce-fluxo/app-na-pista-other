@@ -13,12 +13,13 @@ export const Container = styled.View`
 
 export const View = styled.View`
   background-color: white;
-  width: ${screenWidth * 0.93}px;
-  height: ${screenHeight * 0.25}px;
-  border-radius: 8px;
-  elevation: 4;
+  width: ${props => props.width}px;
+  height: ${props => props.height}px;
+  border-radius: ${props => props.borderRadius}px;
+  elevation: ${props => props.elevation};
   align-self: center;
   margin-top: ${props => props.marginTop}px;
+  margin-left: ${props => props.marginLeft}px;
   margin-bottom: 10px;
 `;
 
@@ -53,7 +54,7 @@ export const TextContainer = styled.View`
   margin-top: 10px;
   max-height: ${screenHeight*0.1}px;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: ${props => props.justifyContent};
 `;
 
 
@@ -61,10 +62,10 @@ export const Text = styled.Text`
   font-family: ${  fonts.Ubuntu};
   font-size:  ${props => props.fontSize}px;
   line-height:   ${props => props.lineHeight}px;
-  margin-left:  20px;
+  margin-left:  ${props => props.marginLeft}px;
   color: ${props => props.color};
   font-weight: normal;
-`
+`;
 
 
 export const IconContainer = styled.TouchableOpacity`
@@ -95,6 +96,6 @@ export const ActivityButton = styled.TouchableOpacity`
 export const TimeContainer = styled.View`
   flex: 1;
   flex-direction: row;
-  width: ${screenWidth * 0.93}px;
-  background-color: white;
+  width: ${screenWidth * 0.9}px;
+  background-color:bl;
 `;

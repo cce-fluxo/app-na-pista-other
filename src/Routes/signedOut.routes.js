@@ -12,6 +12,7 @@ import EarningGoals from "../Pages/EarningGoals";
 import Success from "../Pages/Success";
 import Platform from "../Pages/Platform";
 import Home from "../Pages/Home";
+import SettingsMenu from '../Pages/SettingsMenu'
 
 const Stack = createStackNavigator();
 
@@ -23,6 +24,7 @@ function SignedOutRoutes() {
           headerShown: false,
         }}
       >
+        <Stack.Screen name="Menu Configurações" component={SettingsMenu} />
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="First" component={FirstScreen} />
         <Stack.Screen name="Informacoes basicas" component={BasicInfo} />
